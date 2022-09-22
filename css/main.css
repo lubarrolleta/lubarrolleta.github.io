@@ -1,0 +1,8 @@
+/* line 1, ../sass/main.scss */
+main {
+  background-color: aqua; }
+  /* line 3, ../sass/main.scss */
+  main section#content {
+    background-color: red; }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,182 @@
+@import "../style/index.css";
+// CSS NAV
+nav.navbar{
+    box-sizing: border-box;
+    min-height:20px;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    margin: 0 auto;
+    background-color: wheat;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.6) 0px 0px 10px 0px;
+    // display flex container
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+   
+    SECTION.logo {
+        width: 100%;
+        img{
+            width:100%;
+        }
+    }
+
+    // position: relative;
+    form{
+        // position: absolute;
+        input.input{
+            padding:10px;
+            border: none;
+            border-radius: 9px;
+            outline: none;
+            box-sizing: border-box;
+            &:focus{
+                border-radius:  9px 9px 0 0 ;
+                // outline: 1px solid black;
+
+            }
+            &:focus-within{
+            border-radius: 9px;
+
+            }
+            
+        }
+        section.divDesplegable{
+            display: none;
+            height:0px;
+            transition: all 0.3s ease;
+
+        }
+        section.show{
+            border-radius:  0 0 9px 9px ;
+
+            background-color:white;
+            display: block;
+            max-height: 84px;
+            overflow: overlay;
+            // padding:5px;
+            article.article{
+                display:flex;
+                flex-direction: column;
+                p.p{
+                    padding:5px;
+
+                    text-transform: capitalize;
+                    transition: all 0.3s ease;
+                    cursor: pointer;
+                    &:hover{
+                        background-color:gray;
+                    }
+                }
+            }
+        }
+    }
+}
+main {
+  width: 100%;
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s ease;
+
+
+  
+  .containerCard {
+    padding: 30px 0 0 0;
+    box-sizing: border-box;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    transition: all 0.4s ease;
+    &:nth-child(2) {
+        padding: 0;
+    }
+
+    div.pokemonCard {
+        user-select: none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      box-shadow: rgba(0, 0, 0, 0.6) 0px 0px 10px 0px;
+      display: flex;
+      flex-direction: column;
+
+      cursor: pointer;
+      p {
+        font-weight: 700;
+        text-transform: capitalize;
+        margin-bottom: 9px;
+      }
+      img.img{
+        width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+      }
+      transition: all 0.4s ease;
+      padding: 9px;
+      background-color: gray;
+      border-radius: 9px;
+      height: 300px;
+      width: 200px;
+      max-height:300px;
+      overflow: hidden;
+      margin: 9px;
+      &:hover {
+        background-color: white;
+        transform: scale(1.2, 1.2);
+      }
+    }
+  }
+}
+main.pokemon {
+  background-color: red;
+}
+footer{
+    position:fixed;
+    bottom: 0;
+    background-color:black;
+    width: 100%;
+    padding: 10px;
+    color:white;
+}
+@media (min-width: 768px) {
+    nav.navbar {
+        flex-direction: row;
+
+        // margin: 20px 0;
+        section.logo{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            img{
+                // height: 50px;
+                width: 70%;
+            }
+        }
+        form{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            input{
+                width: 50%;
+            }
+            section.show{
+                width: 50%;
+                article{
+                    width: 100%;
+                }
+
+            }
+        }
+    }
+    .sectionGeneral main {
+        width: 100%;
+        margin: 20px 0;
+    }
+}
